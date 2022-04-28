@@ -26,8 +26,8 @@ def fetch_website(urllib_version, url):
     exec(f"import urllib{urllib_version} as urllib", globals())
     # Fetch and print the requested URL
     http = urllib.PoolManager()
-    r = http.request('GET', url)
-    return r.data
+    req = http.request('GET', url)
+    return req.data
 
 
 
